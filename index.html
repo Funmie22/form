@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="user-info" >
+        <div class="info">
+            <h2>User Information</h2>
+            <label for="first-name">Enter Your First Name: 
+                <input id="first-name" name="first-name" type="text" required />
+                <span id="error-message"></span>
+            </label>
+            <label for="last-name">Enter Your Last Name: 
+                <input id="last-name" name="last-name" type="text" required />
+                <span id="error-message2"></span>
+            </label>
+            <label for="email">Enter Your Email: 
+                <input id="email" name="email" type="email" required />
+                <span id="error-message"></span>
+            </label>
+            <label for="phone-number">Enter your phone number: 
+                <input id="phone-number" name="phone-number" type="tel" required />
+                <span id="phoneerror-message"></span>
+            </label>
+        </div>
+        
+        <div>
+            <h2>Address Information</h2>
+            <label for="address">Street Address: 
+                <input id="address" name="address" type="text" required />
+                <span id="street-error"></span>
+            </label>
+            <label for="city">City: 
+                <input id="city" name="city" type="text" required />
+                <span id="city-error"></span>
+            </label>
+            <label for="zipcode">Enter your zip-code: 
+                <input id="zipcode" name="zip-code" type="text" required />
+                <span id="zip-error"></span>
+            </label>
+        </div>
+        
+        <div>
+            <h2>Payment Information</h2>
+            <label for="credit-card-number">Enter your credit card number: 
+                <input id="credit-card-number" name="credit-card-number" type="text" required />
+                <span id="credit-card-error"></span>
+            </label>
+            <label for="expiration-date">Enter the expiration date: 
+                <input id="expiration-date" name="expiration-date" type="date" required />
+            </label>
+            <label for="cvv">CVV: 
+                <input id="cvv" name="cvv" type="text" required />
+                <span id="cvv-error"></span>
+            </label>
+        </div>
+        <button type="button" id="submit-btn">Submit</button>
+   
+    <script src="index.js"></script>
+</body>
+</html>

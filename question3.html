@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form</title>
+    <link rel="stylesheet" href="styles3.css">
+    
+</head>
+<body>
+    <div class="container">
+    <form id="paymentForm">
+        <h2>Payment Method</h2>
+        <button class="visa-paypal">
+            <img src="images3.png" id="img2">
+        </button>
+        <!-- <button class="visa-paypal"> -->
+            <!-- <img src="download (4).png" id="img2"> 
+        </button>-->
+        
+        <label for="payment-method">Choose a payment method:</label>
+        <select id="payment-method" name="payment-method">
+            <option value="">Select...</option>
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+        </select>
+
+        <div id="credit-card-fields" class="payment-fields">
+            <h3>Credit Card Information</h3>
+            <label for="card-number">Card Number:</label>
+            <input id="card-number" name="card-number" type="text" placeholder="1234 5678 9012 3456">
+            <label for="expiry-date">Expiry Date:</label>
+            <input id="expiry-date" name="expiry-date" type="text" placeholder="MM/YY">
+            <label for="cvv">CVV:</label>
+            <input id="cvv" name="cvv" type="text" placeholder="123">
+        </div>
+
+        <div id="paypal-fields" class="payment-fields">
+            <h3>PayPal Information</h3>
+            <label for="paypal-email">PayPal Email:</label>
+            <input id="paypal-email" name="paypal-email" type="email" placeholder="example@example.com">
+        </div>
+        <button class="payment-btn">Make a payment <i class="fa-solid fa-arrow-right"></i></button>
+    </form>
+    <img src="https://plus.unsplash.com/premium_photo-1682104376321-63afb07e8f97?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img1">
+</div>
+
+<script
+      src="https://kit.fontawesome.com/44e48a9db3.js"
+      crossorigin="anonymous"></script>
+    <script src="script3.js"></script>
+</body>
+</html>

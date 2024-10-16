@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container Styles */
+.container {
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+    max-width: 600px; /* Increased the max-width to make the container larger */
+    padding: 20px; /* Added padding to give some space inside the container */
+    margin-right: 50px; /* Add space between the form and the preview */
+}
+
+#uploadForm {
+    margin-top: 0;
+    padding-bottom: 130px;
+    border-radius: 8px;
+    box-shadow: 0 0 100px rgba(35, 28, 73, 0.1);
+}
+
+/* Form Styles */
+form h2 {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="file"] {
+    width: 80%;
+    padding: 10px;
+    
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Thumbnails Section */
+#thumbnails {
+    padding-bottom: 130px;
+    margin-top: 0;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    width: 100%;
+    max-height: 265px;
+    max-width: 600px; /* Increased the max-width to match the container */
+}
+
+#thumbnails h2 {
+    margin-bottom: 10px;
+    color: brown;
+}
+
+#thumbnails img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#thumbnails img:hover {
+    border-color: #888;
+}
+
+/* Flexbox Layout for Side-by-Side Placement */
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container,
+#thumbnails {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container,
+    #thumbnails {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

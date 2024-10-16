@@ -1,0 +1,2218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body class="__className_36bd41 bg-primary" cz-shortcut-listen="true">
+        <style>
+          #nprogress {
+            pointer-events: none;
+          }
+          #nprogress .bar {
+            background: white;
+            position: fixed;
+            z-index: 1600;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+          }
+          #nprogress .peg {
+            display: block;
+            position: absolute;
+            right: 0;
+            width: 100px;
+            height: 100%;
+            box-shadow: 0 0 10px white, 0 0 5px white;
+            opacity: 1;
+            -webkit-transform: rotate(3deg) translate(0px, -4px);
+            -ms-transform: rotate(3deg) translate(0px, -4px);
+            transform: rotate(3deg) translate(0px, -4px);
+          }
+          #nprogress .spinner {
+            display: block;
+            position: fixed;
+            z-index: 1600;
+            top: 15px;
+            right: 15px;
+          }
+          #nprogress .spinner-icon {
+            width: 18px;
+            height: 18px;
+            box-sizing: border-box;
+            border: 2px solid transparent;
+            border-top-color: white;
+            border-left-color: white;
+            border-radius: 50%;
+            -webkit-animation: nprogress-spinner 400ms linear infinite;
+            animation: nprogress-spinner 400ms linear infinite;
+          }
+          .nprogress-custom-parent {
+            overflow: hidden;
+            position: relative;
+          }
+          .nprogress-custom-parent #nprogress .bar,
+          .nprogress-custom-parent #nprogress .spinner {
+            position: absolute;
+          }
+          @-webkit-keyframes nprogress-spinner {
+            0% {
+              -webkit-transform: rotate(0deg);
+            }
+            100% {
+              -webkit-transform: rotate(360deg);
+            }
+          }
+          @keyframes nprogress-spinner {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+        </style>
+        <div>
+          <nav class="flex flex-wrap justify-between w-full p-2 items-start h-fit">
+            <div class="flex gap-2 items-center">
+              <a href="/board"
+                ><img
+                  alt="Pump"
+                  loading="lazy"
+                  width="25"
+                  height="25"
+                  decoding="async"
+                  data-nimg="1"
+                  class="mr-4"
+                  style="color: transparent"
+                  srcset="
+                    /_next/image?url=%2Flogo.png&amp;w=32&amp;q=75 1x,
+                    /_next/image?url=%2Flogo.png&amp;w=64&amp;q=75 2x
+                  "
+                  src="/_next/image?url=%2Flogo.png&amp;w=64&amp;q=75"
+              /></a>
+              <div class="grid h-fit">
+                <div class="flex gap-2">
+                  <a
+                    class="text-sm text-white hover:underline hover:font-bold"
+                    href="https://twitter.com/pumpdotfun"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >[twitter]</a
+                  ><a
+                    class="text-sm text-white hover:underline hover:font-bold"
+                    href="https://t.me/pumpfunsupport"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >[support]</a
+                  >
+                </div>
+                <div class="flex gap-2">
+                  <a
+                    class="text-sm text-white hover:underline hover:font-bold"
+                    href="https://t.me/launchonpump"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >[telegram]</a
+                  ><button
+                    class="text-sm text-slate-50 hover:font-bold hover:bg-transparent hover:text-slate-50"
+                    type="button"
+                    aria-haspopup="dialog"
+                    aria-expanded="false"
+                    aria-controls="radix-:r0:"
+                    data-state="closed"
+                  >
+                    [how it works]
+                  </button>
+                </div>
+              </div>
+              <div class="hidden md:flex gap-2">
+                <div
+                  class="p-2 rounded flex items-center gap-1 text-sm bg-red-300 animate-shake"
+                >
+                  <a href="/profile/CCpnzUX64F3c8RbbbBNFXLNh3A43NZW6pzWPzxgLhoWA"
+                    ><span class="flex gap-1 items-center"
+                      ><img
+                        alt=""
+                        loading="lazy"
+                        width="16"
+                        height="16"
+                        decoding="async"
+                        data-nimg="1"
+                        class="rounded w-4 h-4"
+                        src="https://pump.mypinata.cloud/ipfs/QmeSzchzEPqCU1jwTnsipwcBAeH7S4bmVvFGfF65iA1BY1?img-width=16&amp;img-dpr=2&amp;img-onerror=redirect"
+                        style="color: transparent; display: block"
+                      /><span
+                        class="px-1 rounded hover:underline flex gap-1"
+                        style="background-color: transparent"
+                        >CCpnzU
+                      </span></span
+                    ></a
+                  >sold 0.0137 SOL of<a
+                    class="hover:underline flex gap-2"
+                    href="/41kiYrfDrsD6SrfgYRcWnpRKJeiYZHVtYsRRyc83pump"
+                    >BHARK<img
+                      alt=""
+                      loading="lazy"
+                      width="20"
+                      height="20"
+                      decoding="async"
+                      data-nimg="1"
+                      class="h-5 w-5 rounded-full"
+                      src="https://pump.mypinata.cloud/ipfs/QmUc5Q4JkuSTBsr1xaVgXbFeszWwwtKSjo44P1FHYzWsfA?img-width=20&amp;img-dpr=2&amp;img-onerror=redirect"
+                      style="color: transparent; display: block"
+                  /></a>
+                </div>
+                <div class="hidden lg:block">
+                  <div
+                    class="p-2 rounded flex items-center gap-1 text-sm bg-blue-300"
+                  >
+                    <span
+                      class="relative flex shrink-0 overflow-hidden rounded-full w-4 h-4"
+                      ><img
+                        class="aspect-square h-full w-full"
+                        alt="anon"
+                        src="https://www.pinclipart.com/picdir/big/184-1843111_pepe-the-frog-crying-png-clipart.png" /></span
+                    ><a href="/profile/GCd6z7o822zN8Kvs8yuCZbHoPR2nFNxAt61kQzKVXrht"
+                      ><span class="hover:underline">GCd6z7 </span></a
+                    ><span>created </span
+                    ><a
+                      class="hover:underline flex gap-2"
+                      href="/5C1doVj2To4oG9MEVJ7HWeqtzxgeCKaUtA6XXXEEpump"
+                      >cris<img
+                        alt=""
+                        loading="lazy"
+                        width="20"
+                        height="20"
+                        decoding="async"
+                        data-nimg="1"
+                        class="h-5 w-5 rounded-full"
+                        src="https://pump.mypinata.cloud/ipfs/Qma9B5kD87feSUQbR2Q5x9MAxoogKZYX3GWiY6GMmY1XYA?img-width=20&amp;img-dpr=2&amp;img-onerror=redirect"
+                        style="color: transparent; display: block" /></a
+                    ><span> on 09/12/24 </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="md:flex md:gap-2 grid gap-1">
+              <div class="grid justify-items-end">
+                <button
+                  class="text-sm text-slate-50 hover:font-bold hover:bg-transparent hover:text-slate-50"
+                  type="button"
+                  aria-haspopup="dialog"
+                  aria-expanded="false"
+                  aria-controls="radix-:r3:"
+                  data-state="closed"
+                >
+                  [connect wallet]
+                </button>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <main class="h-full">
+          <div class="md:hidden lg:hidden flex justify-center my-4"></div>
+          <div class="md:block hidden mt-16 p-4 mb-16">
+            <div class="flex justify-center">
+              <a
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-4 py-2 -mt-5 text-2xl text-slate-50 hover:font-bold hover:bg-transparent hover:text-slate-50"
+                href="/board"
+                >[go back]</a>
+            </div>
+            <div class="flex space-x-8 mt-4">
+              <div class="flex flex-col gap-2 w-2/3">
+                <div class="text-xs text-green-300 flex w-full justify-between items-center"
+                >
+                <div class="flex gap-4 items-center">
+                    <div class="text-gray-400">Fight Club</div>
+                    <div class="text-gray-400">Ticker: Fight</div>
+                    <div>Market cap: $16,620.599</div>
+                    <div class="text-gray-400">
+                      <div class="flex items-center">
+                        <label for="copy-ca">CA:</label
+                        ><input
+                          id="copy-ca"
+                          class="py-0.5 px-1 ml-2 block w-full border border-gray-700 rounded-s-sm text-xs focus-visible:outline-1 focus-visible:outline-dashed disabled:opacity-50 disabled:pointer-events-none bg-black/10"
+                          readonly=""
+                          type="text"
+                          value="CWgAAaDsqqjkUk6nZkThn7AapNCtRTnzcpPY6mKUpump"
+                        /><button
+                          class="cursor-pointer bg-black/20 px-2 py-0.5 inline-flex items-center min-w-fit rounded-e-sm border border-s-0 border-gray-700 text-xs text-gray-500 hover:bg-black/40 focus-visible:outline-1 focus-visible:outline"
+                        >
+                          copy
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="inline-flex items-center gap-2 text-sm">
+                    <span>created by</span
+                    ><a href="/profile/Fightdev"
+                      ><span class="flex gap-1 items-center"
+                        ><img
+                          alt=""
+                          loading="lazy"
+                          width="16"
+                          height="16"
+                          decoding="async"
+                          data-nimg="1"
+                          class="rounded w-4 h-4"
+                          src="https://pump.mypinata.cloud/ipfs/QmRcvuNBFYGReimVf4DndNAZwGu65P3T2bUQoN173fjNg8?img-width=16&amp;img-dpr=2&amp;img-onerror=redirect"
+                          style="color: transparent; display: block"
+                        /><span
+                          class="px-1 rounded hover:underline flex gap-1 text-black"
+                          style="background-color: rgb(225, 224, 190)"
+                          >Fightdev
+                        </span></span
+                      ></a
+                    >
+                  </div>
+                </div>
+                
+                <div class="h-4/8">
+                  <div class="grid h-fit gap-2">
+                    <div class="chart-container">
+                      <div
+                        id="tv-chart-47yt2pgyg5z"
+                        class=""
+                        style="height: 400px; width: 100%"
+                      >
+                        <iframe
+                          id="tradingview_98b94"
+                          name="tradingview_98b94"
+                          src="blob:https://pump.fun/e96c6993-a50f-4adc-89c9-383b69d32dc8"
+                          data-widget-options="symbol=Fight&amp;interval=5&amp;widgetbar=%7B%22details%22%3Afalse%2C%22watchlist%22%3Afalse%2C%22news%22%3Afalse%2C%22datawindow%22%3Afalse%2C%22watchlist_settings%22%3A%7B%22default_symbols%22%3A%5B%5D%7D%7D&amp;timeFrames=%5B%7B%22text%22%3A%225y%22%2C%22resolution%22%3A%221W%22%7D%2C%7B%22text%22%3A%221y%22%2C%22resolution%22%3A%221W%22%7D%2C%7B%22text%22%3A%226m%22%2C%22resolution%22%3A%22120%22%7D%2C%7B%22text%22%3A%223m%22%2C%22resolution%22%3A%2260%22%7D%2C%7B%22text%22%3A%221m%22%2C%22resolution%22%3A%2230%22%7D%2C%7B%22text%22%3A%225d%22%2C%22resolution%22%3A%225%22%7D%2C%7B%22text%22%3A%221d%22%2C%22resolution%22%3A%221%22%7D%5D&amp;locale=en&amp;uid=tradingview_98b94&amp;clientId=0&amp;userId=0&amp;chartsStorageVer=1.0&amp;debug=false&amp;timezone=Etc%2FUTC&amp;theme=dark"
+                          title="Financial Chart"
+                          frameborder="0"
+                          allowtransparency="true"
+                          scrolling="no"
+                          allowfullscreen=""
+                          style="display: block; width: 100%; height: 100%"
+                        >
+                        </iframe>
+                      </div>
+                      <div class="hidden">
+                        <div id="dexscreener-embed">
+                          <iframe
+                            id="geckoterminal-embed"
+                            title="GeckoTerminal Embed"
+                            src="https://www.geckoterminal.com/solana/pools/null?embed=1&amp;info=0&amp;swaps=0&amp;grayscale=1"
+                            allow="clipboard-write"
+                            allowfullscreen=""
+                            style="height: 400px; width: 100%"
+                          ></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex gap-2 h-fit mt-4">
+                  <div class="cursor-pointer px-1 rounded bg-green-300 text-black">
+                    Thread
+                  </div>
+                  <div
+                    class="cursor-pointer px-1 rounded hover:bg-gray-800 text-gray-500"
+                  >
+                    Trades
+                  </div>
+                </div>
+
+
+                <div class="text-slate-300 grid gap-1 relative">
+                  <div class="gap-1 grid h-fit bg-[#2e303a] p-1 text-sm">
+                    <div class="flex gap-1 text-xs">
+                      <a href="/profile/Fightdev"
+                        ><span class="flex gap-1 items-center"
+                          ><img
+                            alt=""
+                            loading="lazy"
+                            width="16"
+                            height="16"
+                            decoding="async"
+                            data-nimg="1"
+                            class="rounded w-4 h-4"
+                            src="https://pump.mypinata.cloud/ipfs/QmRcvuNBFYGReimVf4DndNAZwGu65P3T2bUQoN173fjNg8?img-width=16&amp;img-dpr=2&amp;img-onerror=redirect"
+                            style="color: transparent; display: block"
+                          /><span
+                            class="px-1 rounded hover:underline flex gap-1 text-black"
+                            style="background-color: rgb(225, 224, 190)"
+                            >Fightdev (dev)</span
+                          ></span
+                        ></a
+                      >
+                      <div class="text-slate-400">9/12/2024, 1:21:25 PM</div>
+                    </div>
+                    <div
+                      class="relative items-start gap-3 text-slate-300 text-xs overflow-auto flex"
+                    >
+                      <img
+                        alt="name"
+                        loading="lazy"
+                        width="800"
+                        height="800"
+                        decoding="async"
+                        data-nimg="1"
+                        class="w-32 object-contain cursor-pointer max-h-screen"
+                        src="https://pump.mypinata.cloud/ipfs/QmRcvuNBFYGReimVf4DndNAZwGu65P3T2bUQoN173fjNg8?img-width=800&amp;img-dpr=2&amp;img-onerror=redirect"
+                        style="color: transparent; display: block"
+                      />
+                      <div class="grid">
+                        <div class="font-bold text-sm">
+                          Fight Club (ticker: Fight)
+                        </div>
+                        <div class="break-anywhere">
+                          Its time to create a new meta, Crypto Yeeti doxxed himself
+                          to create one of the biggest memecoins in this season
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    id="p11950781"
+                    class="bg-[#2e303a] p-1 text-slate-200 text-sm grid gap-1 overflow-auto"
+                  >
+                    <div
+                      class="flex flex-wrap gap-2 text-slate-400 text-xs items-start w-full"
+                    >
+                      <a href="/profile/AUbsungBpFD8HercVcciiRQ5jDQd8RBLSe6Q1ks699DN"
+                        ><span class="flex gap-1 items-center"
+                          ><img
+                            alt=""
+                            loading="lazy"
+                            width="16"
+                            height="16"
+                            decoding="async"
+                            data-nimg="1"
+                            class="rounded w-4 h-4"
+                            src="https://pump.mypinata.cloud/ipfs/QmeSzchzEPqCU1jwTnsipwcBAeH7S4bmVvFGfF65iA1BY1?img-width=16&amp;img-dpr=2&amp;img-onerror=redirect"
+                            style="color: transparent; display: block"
+                          /><span
+                            class="px-1 rounded hover:underline flex gap-1 text-black"
+                            style="background-color: rgb(221, 151, 198)"
+                            >AUbsun
+                          </span></span
+                        ></a
+                      >
+                      <div>1:25:38 PM</div>
+                      <div
+                        class="flex items-center gap-2 w-fit hover:text-red-500 hover:stroke-red-500 cursor-pointer"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-heart"
+                        >
+                          <path
+                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                          ></path>
+                        </svg>
+                        <div>0</div>
+                      </div>
+                      <div class="cursor-pointer justify-self-end hover:underline">
+                        #11950781 [reply]
+                      </div>
+                    </div>
+                    <div class="flex gap-2 items-start">
+                      <div>
+                        Hello Fight fam, create your token on %Mint%Me%, with no cost
+                        involved.
+                      </div>
+                    </div>
+                    <div class="flex gap-2"></div>
+                  </div>
+                  <div
+                    id="p11954964"
+                    class="bg-[#2e303a] p-1 text-slate-200 text-sm grid gap-1 overflow-auto"
+                  >
+                    <div
+                      class="flex flex-wrap gap-2 text-slate-400 text-xs items-start w-full"
+                    >
+                      <a href="/profile/TollTroll"
+                        ><span class="flex gap-1 items-center"
+                          ><img
+                            alt=""
+                            loading="lazy"
+                            width="16"
+                            height="16"
+                            decoding="async"
+                            data-nimg="1"
+                            class="rounded w-4 h-4"
+                            src="https://pump.mypinata.cloud/ipfs/QmVeu7XJwHrDEGv29mEj9cS4VXJgA1Pe8o4C6TDryq82iJ?img-width=16&amp;img-dpr=2&amp;img-onerror=redirect"
+                            style="color: transparent; display: block"
+                          /><span
+                            class="px-1 rounded hover:underline flex gap-1 text-black"
+                            style="background-color: rgb(175, 247, 184)"
+                            >TollTroll
+                          </span></span
+                        ></a
+                      >
+                      <div>2:09:40 PM</div>
+                      <div
+                        class="flex items-center gap-2 w-fit hover:text-red-500 hover:stroke-red-500 cursor-pointer"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-heart"
+                        >
+                          <path
+                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                          ></path>
+                        </svg>
+                        <div>0</div>
+                      </div>
+                      <div class="cursor-pointer justify-self-end hover:underline">
+                        #11954964 [reply]
+                      </div>
+                    </div>
+                    <div class="flex gap-2 items-start">
+                      <img
+                        alt=""
+                        loading="lazy"
+                        width="800"
+                        height="800"
+                        decoding="async"
+                        data-nimg="1"
+                        class="w-32 object-contain cursor-pointer max-h-[500px]"
+                        src="https://pump.mypinata.cloud/ipfs/QmZkGrTBWK8PwF1EXmY1ogo7DHccVsq4CgrZRjDxLPZBY5?img-width=800&amp;img-dpr=2&amp;img-onerror=redirect"
+                        style="color: transparent; display: block"
+                      />
+                      <div>Pay the toll</div>
+                    </div>
+                    <div class="flex gap-2"></div>
+                  </div>
+                  <div
+                    id="p11955283"
+                    class="bg-[#2e303a] p-1 text-slate-200 text-sm grid gap-1 overflow-auto"
+                  >
+                    <div
+                      class="flex flex-wrap gap-2 text-slate-400 text-xs items-start w-full"
+                    >
+                      <a href="/profile/LangA11"
+                        ><span class="flex gap-1 items-center"
+                          ><img
+                            alt=""
+                            loading="lazy"
+                            width="16"
+                            height="16"
+                            decoding="async"
+                            data-nimg="1"
+                            class="rounded w-4 h-4"
+                            src="https://pump.mypinata.cloud/ipfs/QmeSzchzEPqCU1jwTnsipwcBAeH7S4bmVvFGfF65iA1BY1?img-width=16&amp;img-dpr=2&amp;img-onerror=redirect"
+                            style="color: transparent; display: block"
+                          /><span
+                            class="px-1 rounded hover:underline flex gap-1 text-black"
+                            style="background-color: rgb(243, 127, 179)"
+                            >LangA11
+                          </span></span
+                        ></a
+                      >
+                      <div>2:11:38 PM</div>
+                      <div
+                        class="flex items-center gap-2 w-fit hover:text-red-500 hover:stroke-red-500 cursor-pointer"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-heart"
+                        >
+                          <path
+                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                          ></path>
+                        </svg>
+                        <div>0</div>
+                      </div>
+                      <div class="cursor-pointer justify-self-end hover:underline">
+                        #11955283 [reply]
+                      </div>
+                      <a
+                        href="https://solscan.io/tx/3BwUwDSrvwvtvczF4oQaiPuoMaqS34kVJYjzfbh1Yz7Kbwu4mizvcezU9aJ8V3WpjzTcAqcWkJUyWXP61e9vX3ec"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="rounded px-1 text-black hover:underline bg-green-300"
+                        >bought 0.1003 SOL</a
+                      >
+                    </div>
+                    <div class="flex gap-2 items-start"><div>To The moon</div></div>
+                    <div class="flex gap-2"></div>
+                  </div>
+                  <div
+                    id="p11955374"
+                    class="bg-[#2e303a] p-1 text-slate-200 text-sm grid gap-1 overflow-auto"
+                  >
+                    <div
+                      class="flex flex-wrap gap-2 text-slate-400 text-xs items-start w-full"
+                    >
+                      <a href="/profile/LangA11"
+                        ><span class="flex gap-1 items-center"
+                          ><img
+                            alt=""
+                            loading="lazy"
+                            width="16"
+                            height="16"
+                            decoding="async"
+                            data-nimg="1"
+                            class="rounded w-4 h-4"
+                            src="https://pump.mypinata.cloud/ipfs/QmeSzchzEPqCU1jwTnsipwcBAeH7S4bmVvFGfF65iA1BY1?img-width=16&amp;img-dpr=2&amp;img-onerror=redirect"
+                            style="color: transparent; display: block"
+                          /><span
+                            class="px-1 rounded hover:underline flex gap-1 text-black"
+                            style="background-color: rgb(243, 127, 179)"
+                            >LangA11
+                          </span></span
+                        ></a
+                      >
+                      <div>2:12:20 PM</div>
+                      <div
+                        class="flex items-center gap-2 w-fit hover:text-red-500 hover:stroke-red-500 cursor-pointer"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-heart"
+                        >
+                          <path
+                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                          ></path>
+                        </svg>
+                        <div>0</div>
+                      </div>
+                      <div class="cursor-pointer justify-self-end hover:underline">
+                        #11955374 [reply]
+                      </div>
+                    </div>
+                    <div class="flex gap-2 items-start"><div>Raids Fams</div></div>
+                    <div class="flex gap-2"></div>
+                  </div>
+                  <div class="justify-self-center hover:underline cursor-pointer">
+                    [Post a reply]
+                  </div>
+                </div>
+              </div>
+
+              
+              
+              <div class="w-1/3 grid gap-4 h-fit w-fit">
+                <div class="w-full md:w-[350px] grid gap-4">
+                  <div
+                    class="bg-[#2e303a] p-4 rounded-lg border border-none text-gray-400 grid gap-4"
+                  >
+                    <div class="grid grid-cols-2 gap-2 mb-4">
+                      <button
+                        class="p-2 text-center rounded bg-green-400 text-primary"
+                      >
+                        Buy</button
+                      ><button
+                        class="p-2 text-center rounded bg-gray-800 text-grey-600"
+                      >
+                        Sell
+                      </button>
+                    </div>
+                    <div class="flex justify-between w-full gap-2">
+                      <button
+                        class="text-xs py-1 px-2 rounded bg-primary text-gray-400 hover:bg-gray-800 hover:text-gray-300"
+                      >
+                        switch to Fight</button
+                      ><button
+                        class="text-xs py-1 px-2 rounded text-gray-400 hover:bg-gray-800 bg-primary"
+                        type="button"
+                        aria-haspopup="dialog"
+                        aria-expanded="false"
+                        aria-controls="radix-:r9a:"
+                        data-state="closed"
+                      >
+                        Set max slippage
+                      </button>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="flex items-center rounded-md relative bg-[#2e303a]">
+                        <input
+                          class="flex h-10 rounded-md border border-slate-200 px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:ring-offset-slate-950 dark:placeholder:text-slate-400 dark:focus-visible:ring-slate-300 bg-transparent text-white outline-none w-full pl-3"
+                          id="amount"
+                          placeholder="0.0"
+                          type="number"
+                        />
+                        <div class="flex items-center ml-2 absolute right-2">
+                          <span class="text-white mr-2">SOL</span
+                          ><img
+                            alt="SOL"
+                            loading="lazy"
+                            width="32"
+                            height="32"
+                            decoding="async"
+                            data-nimg="1"
+                            class="w-8 h-8 rounded-full"
+                            srcset="
+                              /_next/image?url=%2Fsolana-logo-square.png&amp;w=32&amp;q=75 1x,
+                              /_next/image?url=%2Fsolana-logo-square.png&amp;w=64&amp;q=75 2x
+                            "
+                            src="/_next/image?url=%2Fsolana-logo-square.png&amp;w=64&amp;q=75"
+                            style="color: transparent"
+                          />
+                        </div>
+                      </div>
+                      <div class="flex mt-2 bg-[#2e303a] p-1 rounded-lg">
+                        <button
+                          class="text-xs py-1 -ml-1 px-2 rounded bg-primary text-gray-400 hover:bg-gray-800 hover:text-gray-300"
+                        >
+                          reset</button
+                        ><button
+                          class="text-xs py-1 px-2 ml-1 rounded bg-primary text-gray-400 hover:bg-gray-800 hover:text-gray-300"
+                        >
+                          1 SOL</button
+                        ><button
+                          class="text-xs py-1 px-2 ml-1 rounded bg-primary text-gray-400 hover:bg-gray-800 hover:text-gray-300"
+                        >
+                          5 SOL</button
+                        ><button
+                          class="text-xs py-1 px-2 ml-1 rounded bg-primary text-gray-400 hover:bg-gray-800 hover:text-gray-300"
+                        >
+                          10 SOL
+                        </button>
+                      </div>
+                    </div>
+                    <button
+                      class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/90 h-10 px-4 bg-green-400 text-primary w-full py-3 rounded-md hover:bg-green-200"
+                    >
+                      place trade
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="w-[350px] bg-transparent text-gray-400 rounded-lg border border-none grid gap-4"
+                >
+                  <div class="flex gap-4">
+                    <a
+                      href="https://x.com/yeeti_fightdev"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-gray-400 hover:underline"
+                      >[twitter]</a
+                    ><a
+                      href="https://t.me/Fightclubmemeportal"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-gray-400 hover:underline"
+                      >[telegram]</a
+                    ><a
+                      href="https://fightclubmemecoin.xyz"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-gray-400 hover:underline"
+                      >[website]</a
+                    >
+                  </div>
+                  <div class="gap-3 h-fit items-start flex">
+                    <img
+                      alt=""
+                      loading="lazy"
+                      width="256"
+                      height="256"
+                      decoding="async"
+                      data-nimg="1"
+                      class="w-32 object-contain cursor-pointer"
+                      src="https://pump.mypinata.cloud/ipfs/QmRcvuNBFYGReimVf4DndNAZwGu65P3T2bUQoN173fjNg8?img-width=256&amp;img-dpr=2&amp;img-onerror=redirect"
+                      style="color: transparent; display: block"
+                    />
+                    <div>
+                      <div class="font-bold text-sm">Fight Club (ticker: Fight)</div>
+                      <div class="text-xs text-gray-400 break-anywhere">
+                        Its time to create a new meta, Crypto Yeeti doxxed himself to
+                        create one of the biggest memecoins in this season
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="text-sm text-gray-400 mb-1">
+                      bonding curve progress: 71%
+                    </div>
+                    <div
+                      aria-valuemax="100"
+                      aria-valuemin="0"
+                      role="progressbar"
+                      data-state="indeterminate"
+                      data-max="100"
+                      class="relative h-4 overflow-hidden rounded-full dark:bg-slate-800 w-full bg-gray-700"
+                    >
+                      <div
+                        data-state="indeterminate"
+                        data-max="100"
+                        class="h-full w-full flex-1 bg-green-300 transition-all dark:bg-slate-50"
+                        style="transform: translateX(-29%)"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="text-xs text-gray-400">
+                    when the market cap reaches $55,488 all the liquidity from the
+                    bonding curve will be deposited into Raydium and burned.
+                    progression increases as the price goes up.<br /><br />there are
+                    230,371,612 tokens still available for sale in the bonding curve
+                    and there is 33.084 SOL in the bonding curve.
+                  </div>
+                  <div class="grid gap-2">
+                    <div class="text-sm text-gray-400">
+                      king of the hill progress: 83%
+                    </div>
+                    <div
+                      aria-valuemax="100"
+                      aria-valuemin="0"
+                      role="progressbar"
+                      data-state="indeterminate"
+                      data-max="100"
+                      class="relative h-4 overflow-hidden rounded-full dark:bg-slate-800 w-full bg-gray-700"
+                    >
+                      <div
+                        data-state="indeterminate"
+                        data-max="100"
+                        class="h-full w-full flex-1 bg-yellow-500 transition-all dark:bg-slate-50"
+                        style="transform: translateX(-17%)"
+                      ></div>
+                    </div>
+                    <div class="text-xs text-gray-400">
+                      dethrone the current king at a $26,888 mcap
+                    </div>
+                  </div>
+                  <div class="grid gap-2">
+                    <div class="font-bold flex justify-between items-center">
+                      Holder distribution
+                      <button
+                        class="whitespace-nowrap text-xs font-medium ring-offset-white transition-colors py-1 px-2 rounded text-gray-400 hover:bg-gray-600 bg-gray-700"
+                      >
+                        Generate bubble map
+                      </button>
+                    </div>
+                    <div class="text-sm">
+                      <div class="grid gap-1">
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/64AgSyT2ZfnsaZ1h8jteLmN2er62ixAyWWG4Yfe8wDcY"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >1. 64AgSy 🏦 (bonding curve)</a
+                          >
+                          <div>43.72%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/Hczs59E7jxCDUcXYN5txeAQdVANXpE8cgg527eG6obV1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >2. Hczs59</a
+                          >
+                          <div>5.31%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/GRthFszqC3ardkqp8mfrnLk3xyAHqV9QPd5zRnxbPD25"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >3. GRthFs 🤵‍♂️ (dev)</a
+                          >
+                          <div>3.46%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/FuHxNPARX19Uzx6ME5jRX4R2u3rvDE3CfHtF4geaA9Rr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >4. FuHxNP</a
+                          >
+                          <div>3.28%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/6LNrm32nfHd4WCWv64uSbyTm6GTNGE9MJsdKY9wWdffs"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >5. 6LNrm3</a
+                          >
+                          <div>3.00%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/5n96DHEKmDfq8MBiQ2QurHhpdrN9m1LjoCUWgwo6jP3L"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >6. 5n96DH</a
+                          >
+                          <div>2.76%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/AsJ75dTqaHLUAs7MMqH8YXtvASdXqEg15bkcXZ6KjeR3"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >7. AsJ75d</a
+                          >
+                          <div>2.54%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/5ztraJ1Z1UMXdzN3ba5oLzsymC8GBS5KX7851ot3NS4y"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >8. 5ztraJ</a
+                          >
+                          <div>1.43%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/ATHrBEUTTv2iSiXj687ekhRtsZPgkUUtCSzMu6uKcsCe"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >9. ATHrBE</a
+                          >
+                          <div>1.26%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/7Ume7KsPwTU5G2f6ueErhajgxsqzrPx4s4VFtFdxhEzC"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >10. 7Ume7K</a
+                          >
+                          <div>1.22%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/29KZuor7nWMbWegAtFuwTFrbKXY86oSpStbET5cY4j58"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >11. 29KZuo</a
+                          >
+                          <div>1.16%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/FrXBe6kMmkaTypZqbhFN5HzquJXfvzkVn6rgzi8SRBrd"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >12. FrXBe6</a
+                          >
+                          <div>1.16%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/7S1v584UrqaNZoUG1hi31pKxVvpu2JZ76H86FnUzmVvo"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >13. 7S1v58</a
+                          >
+                          <div>1.16%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/4qmevSSPxyb8nVaFHBQiwfwhftVCfGnQjsS4MkPbK3uf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >14. 4qmevS</a
+                          >
+                          <div>0.99%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/1od7AfKNw3j6AYMWcVAXJkyYN1ozo6mVPSCHH1E2Hfm"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >15. 1od7Af</a
+                          >
+                          <div>0.94%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/55hbjPSVx1rBc31Kck3d4hVPbzqTYdCKi4Nf7562W1Vg"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >16. 55hbjP</a
+                          >
+                          <div>0.90%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/HtLrZTN9Sau2Py8GEGMv119xtKBxgdbdeXT91fqmmxzo"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >17. HtLrZT</a
+                          >
+                          <div>0.89%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/7zkV6LBWb4yNosLiBurx3mtkMFhBGaBMZwpZCtaopzHi"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >18. 7zkV6L</a
+                          >
+                          <div>0.87%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/CrEuyoLetpYrjjuE8XXdd2VsG5F9cz4EF7jpJxAr9Nwz"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >19. CrEuyo</a
+                          >
+                          <div>0.86%</div>
+                        </div>
+                        <div class="flex justify-between">
+                          <a
+                            class="hover:underline"
+                            href="https://solscan.io/account/8DGVkNrDzSKFUGgjhjbz6DG85fnihu6Sy4RxqypmannJ"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >20. 8DGVkN</a
+                          >
+                          <div>0.83%</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          ;
+          <div class="mt-auto py-4 text-gray-400 text-sm md:px-12 px-2">
+            <div class="flex justify-between items-center relative">
+              <p class="flex-shrink-0">© pump.fun 2024</p>
+              <p
+                class="text-gray-400 text-xs absolute left-1/2 transform -translate-x-1/2 text-center"
+              >
+                This site is protected by reCAPTCHA and the Google
+                <a
+                  href="https://www.google.com/intl/en/policies/privacy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="underline"
+                  >Privacy Policy</a
+                >
+                and
+                <a
+                  href="https://www.google.com/intl/en/policies/terms/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="underline"
+                  >Terms of Service</a
+                >
+                apply.
+              </p>
+              <a
+                rel="noopener noreferrer"
+                class="flex-shrink-0"
+                href="/report/coins/CWgAAaDsqqjkUk6nZkThn7AapNCtRTnzcpPY6mKUpump"
+                >Report</a
+              >
+            </div>
+          </div>
+        </main>
+        <div
+          role="region"
+          aria-label="Notifications (F8)"
+          tabindex="-1"
+          style="pointer-events: none"
+        >
+          <ol
+            tabindex="-1"
+            class="fixed top-0 z-[100] max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px] grid gap-2"
+          ></ol>
+        </div>
+        <script
+          src="/_next/static/chunks/webpack-a3e35be2d536d620.js"
+          async=""
+        ></script>
+        <script>
+          (self.__next_f = self.__next_f || []).push([0]);
+          self.__next_f.push([2, null]);
+        </script>
+        <script>
+          self.__next_f.push([
+            1,
+            '1:HL["/_next/static/media/a34f9d1faa5f3315-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]\n2:HL["/_next/static/css/2882f330f5aa5ff3.css","style"]\n3:HL["/_next/static/css/673bf4202ccb2f27.css","style"]\n4:HL["/_next/static/css/628765f20b848f76.css","style"]\n',
+          ]);
+        </script>
+        <script>
+          self.__next_f.push([
+            1,
+            '5:I[95751,[],""]\n7:I[66513,[],"ClientPageRoot"]\n8:I[62060,["3814","static/chunks/3a91511d-50da2831e72d40e5.js","9571","static/chunks/160b575a-14f45a5e3761907f.js","8310","static/chunks/0e5ce63c-41aa15a72bd14908.js","6481","static/chunks/144d3bae-3bc2a79a5a472990.js","3590","static/chunks/3590-9a61a5146d4417da.js","9835","static/chunks/9835-313684ed6ff2179a.js","231","static/chunks/231-41d8503f4dc44393.js","750","static/chunks/750-c1f16a3301e7196d.js","9493","static/chunks/9493-e88618608b542580.js","5600","static/chunks/5600-618853084d4c862b.js","6648","static/chunks/6648-bb7b0e1f94def41b.js","2578","static/chunks/2578-d3c4bbb90a2ddba9.js","4674","static/chunks/4674-7c596821a082f055.js","6533","static/chunks/6533-6b65eeede1eeee64.js","3496","static/chunks/3496-741ae05db901b757.js","3061","static/chunks/3061-b544eb95cac501a8.js","9171","static/chunks/9171-b1adde31ee8ab86c.js","5858","static/chunks/5858-4b03710ec0e414d8.js","1316","static/chunks/1316-11a1f0a401ed8022.js","1680","static/chunks/1680-79fdec77aa5389cc.js","1589","static/chunks/1589-4e2328f8c0e39e68.js","9130","static/chunks/9130-19e0096f9cbece51.js","344","static/chunks/app/(main)/board/page-661d9e3e3e8d561b.js"],"default"]\n9:I[39275,[],""]\na:I[61343,[],""]\nb:I[31163,["3814","static/chunks/3a91511d-50da2831e72d40e5.js","9571","static/chunks/160b575a-14f45a5e3761907f.js","8310","static/chunks/0e5ce63c-41aa15a72bd14908.js","3125","static/chunks/2f0b94e8-11a27c6e04403e16.js","4335","static/chunks/97b52221-692030675c14f0cc.js","2420","static/chunks/9081a741-0a8b652ae52747bc.js","1787","static/chunks/b5c10047-8080ffca0072441b.js","3590","static/chunks/3590-9a61a5146d4417da.js","9835","static/chunks/9835-313684ed6ff2179a.js","231","static/chunks/231-41d8503f4dc44393.js","750","static/chunks/750-c1f16a3301e7196d.js","9493","static/chunks/9493-e88618608b542580.js","5600","static/chunks/5600-618853084d4c862b.js","6648","static/chunks/6648-bb7b0e1f94def41b.js","2578","static/chunks/2578-d3c4bbb90a2ddba9.js","6533","static/chunks/6533-6b65eeede1eeee64.js","3496","',
+          ]);
+        </script>
+        <script>
+          self.__next_f.push([
+            1,
+            'static/chunks/3496-741ae05db901b757.js","2953","static/chunks/2953-0a9efef0141a5e5c.js","3061","static/chunks/3061-b544eb95cac501a8.js","323","static/chunks/323-a4393d3be76e73b9.js","1316","static/chunks/1316-11a1f0a401ed8022.js","717","static/chunks/717-54adf1cfb42ad5e8.js","4832","static/chunks/4832-f3dedf095457b526.js","4095","static/chunks/app/(main)/layout-b0edff0f7812f23f.js"],"default"]\nc:I[27744,["3814","static/chunks/3a91511d-50da2831e72d40e5.js","9571","static/chunks/160b575a-14f45a5e3761907f.js","8310","static/chunks/0e5ce63c-41aa15a72bd14908.js","3125","static/chunks/2f0b94e8-11a27c6e04403e16.js","4335","static/chunks/97b52221-692030675c14f0cc.js","2420","static/chunks/9081a741-0a8b652ae52747bc.js","1787","static/chunks/b5c10047-8080ffca0072441b.js","3590","static/chunks/3590-9a61a5146d4417da.js","9835","static/chunks/9835-313684ed6ff2179a.js","231","static/chunks/231-41d8503f4dc44393.js","750","static/chunks/750-c1f16a3301e7196d.js","9493","static/chunks/9493-e88618608b542580.js","5600","static/chunks/5600-618853084d4c862b.js","6648","static/chunks/6648-bb7b0e1f94def41b.js","2578","static/chunks/2578-d3c4bbb90a2ddba9.js","6533","static/chunks/6533-6b65eeede1eeee64.js","3496","static/chunks/3496-741ae05db901b757.js","2953","static/chunks/2953-0a9efef0141a5e5c.js","3061","static/chunks/3061-b544eb95cac501a8.js","323","static/chunks/323-a4393d3be76e73b9.js","1316","static/chunks/1316-11a1f0a401ed8022.js","717","static/chunks/717-54adf1cfb42ad5e8.js","4832","static/chunks/4832-f3dedf095457b526.js","4095","static/chunks/app/(main)/layout-b0edff0f7812f23f.js"],"Toaster"]\nd:I[76030,["3814","static/chunks/3a91511d-50da2831e72d40e5.js","9571","static/chunks/160b575a-14f45a5e3761907f.js","8310","static/chunks/0e5ce63c-41aa15a72bd14908.js","3125","static/chunks/2f0b94e8-11a27c6e04403e16.js","4335","static/chunks/97b52221-692030675c14f0cc.js","2420","static/chunks/9081a741-0a8b652ae52747bc.js","1787","static/chunks/b5c10047-8080ffca0072441b.js","3590","static/chunks/3590-9a61a5146d4417da.js","9835","static/chunk',
+          ]);
+        </script>
+        <script>
+          self.__next_f.push([
+            1,
+            's/9835-313684ed6ff2179a.js","231","static/chunks/231-41d8503f4dc44393.js","750","static/chunks/750-c1f16a3301e7196d.js","9493","static/chunks/9493-e88618608b542580.js","5600","static/chunks/5600-618853084d4c862b.js","6648","static/chunks/6648-bb7b0e1f94def41b.js","2578","static/chunks/2578-d3c4bbb90a2ddba9.js","6533","static/chunks/6533-6b65eeede1eeee64.js","3496","static/chunks/3496-741ae05db901b757.js","2953","static/chunks/2953-0a9efef0141a5e5c.js","3061","static/chunks/3061-b544eb95cac501a8.js","323","static/chunks/323-a4393d3be76e73b9.js","1316","static/chunks/1316-11a1f0a401ed8022.js","717","static/chunks/717-54adf1cfb42ad5e8.js","4832","static/chunks/4832-f3dedf095457b526.js","4095","static/chunks/app/(main)/layout-b0edff0f7812f23f.js"],"default"]\ne:I[19593,["3814","static/chunks/3a91511d-50da2831e72d40e5.js","9835","static/chunks/9835-313684ed6ff2179a.js","750","static/chunks/750-c1f16a3301e7196d.js","9493","static/chunks/9493-e88618608b542580.js","3061","static/chunks/3061-b544eb95cac501a8.js","1316","static/chunks/1316-11a1f0a401ed8022.js","6740","static/chunks/6740-337f8e04981a368c.js","7212","static/chunks/7212-081c7f262580543d.js","3185","static/chunks/app/layout-0bc039a425f44e89.js"],""]\nf:I[41430,["3814","static/chunks/3a91511d-50da2831e72d40e5.js","9835","static/chunks/9835-313684ed6ff2179a.js","750","static/chunks/750-c1f16a3301e7196d.js","9493","static/chunks/9493-e88618608b542580.js","3061","static/chunks/3061-b544eb95cac501a8.js","1316","static/chunks/1316-11a1f0a401ed8022.js","6740","static/chunks/6740-337f8e04981a368c.js","7212","static/chunks/7212-081c7f262580543d.js","3185","static/chunks/app/layout-0bc039a425f44e89.js"],"SocketProvider"]\n10:I[13397,["3814","static/chunks/3a91511d-50da2831e72d40e5.js","9835","static/chunks/9835-313684ed6ff2179a.js","750","static/chunks/750-c1f16a3301e7196d.js","9493","static/chunks/9493-e88618608b542580.js","3061","static/chunks/3061-b544eb95cac501a8.js","1316","static/chunks/1316-11a1f0a401ed8022.js","6740","static/chunks/6740-337f8e04981a368c.js","7212",',
+          ]);
+        </script>
+        <script>
+          self.__next_f.push([
+            1,
+            '"static/chunks/7212-081c7f262580543d.js","3185","static/chunks/app/layout-0bc039a425f44e89.js"],"RpcUrlProvider"]\n11:I[94502,["3814","static/chunks/3a91511d-50da2831e72d40e5.js","9835","static/chunks/9835-313684ed6ff2179a.js","750","static/chunks/750-c1f16a3301e7196d.js","9493","static/chunks/9493-e88618608b542580.js","3061","static/chunks/3061-b544eb95cac501a8.js","1316","static/chunks/1316-11a1f0a401ed8022.js","6740","static/chunks/6740-337f8e04981a368c.js","7212","static/chunks/7212-081c7f262580543d.js","3185","static/chunks/app/layout-0bc039a425f44e89.js"],"SolPriceProvider"]\n12:I[60570,["3814","static/chunks/3a91511d-50da2831e72d40e5.js","9835","static/chunks/9835-313684ed6ff2179a.js","750","static/chunks/750-c1f16a3301e7196d.js","9493","static/chunks/9493-e88618608b542580.js","3061","static/chunks/3061-b544eb95cac501a8.js","1316","static/chunks/1316-11a1f0a401ed8022.js","6740","static/chunks/6740-337f8e04981a368c.js","7212","static/chunks/7212-081c7f262580543d.js","3185","static/chunks/app/layout-0bc039a425f44e89.js"],"SolanaWalletProvider"]\n13:I[54891,["3814","static/chunks/3a91511d-50da2831e72d40e5.js","9835","static/chunks/9835-313684ed6ff2179a.js","750","static/chunks/750-c1f16a3301e7196d.js","9493","static/chunks/9493-e88618608b542580.js","3061","static/chunks/3061-b544eb95cac501a8.js","1316","static/chunks/1316-11a1f0a401ed8022.js","6740","static/chunks/6740-337f8e04981a368c.js","7212","static/chunks/7212-081c7f262580543d.js","3185","static/chunks/app/layout-0bc039a425f44e89.js"],"ProfileProvider"]\n14:I[4308,["3814","static/chunks/3a91511d-50da2831e72d40e5.js","9835","static/chunks/9835-313684ed6ff2179a.js","750","static/chunks/750-c1f16a3301e7196d.js","9493","static/chunks/9493-e88618608b542580.js","3061","static/chunks/3061-b544eb95cac501a8.js","1316","static/chunks/1316-11a1f0a401ed8022.js","6740","static/chunks/6740-337f8e04981a368c.js","7212","static/chunks/7212-081c7f262580543d.js","3185","static/chunks/app/layout-0bc039a425f44e89.js"],"PriorityFeeProvider"]\n15:I[29113,["3814","static/chunks/3a9',
+          ]);
+        </script>
+        <script>
+          self.__next_f.push([
+            1,
+            '1511d-50da2831e72d40e5.js","9835","static/chunks/9835-313684ed6ff2179a.js","750","static/chunks/750-c1f16a3301e7196d.js","9493","static/chunks/9493-e88618608b542580.js","3061","static/chunks/3061-b544eb95cac501a8.js","1316","static/chunks/1316-11a1f0a401ed8022.js","6740","static/chunks/6740-337f8e04981a368c.js","7212","static/chunks/7212-081c7f262580543d.js","3185","static/chunks/app/layout-0bc039a425f44e89.js"],"IpfsPrefixProvider"]\n16:I[81248,["3814","static/chunks/3a91511d-50da2831e72d40e5.js","9835","static/chunks/9835-313684ed6ff2179a.js","750","static/chunks/750-c1f16a3301e7196d.js","9493","static/chunks/9493-e88618608b542580.js","3061","static/chunks/3061-b544eb95cac501a8.js","1316","static/chunks/1316-11a1f0a401ed8022.js","6740","static/chunks/6740-337f8e04981a368c.js","7212","static/chunks/7212-081c7f262580543d.js","3185","static/chunks/app/layout-0bc039a425f44e89.js"],"LastClickImpressionProvider"]\n17:I[60832,["3814","static/chunks/3a91511d-50da2831e72d40e5.js","9835","static/chunks/9835-313684ed6ff2179a.js","750","static/chunks/750-c1f16a3301e7196d.js","9493","static/chunks/9493-e88618608b542580.js","3061","static/chunks/3061-b544eb95cac501a8.js","1316","static/chunks/1316-11a1f0a401ed8022.js","6740","static/chunks/6740-337f8e04981a368c.js","7212","static/chunks/7212-081c7f262580543d.js","3185","static/chunks/app/layout-0bc039a425f44e89.js"],"SeenCoinsObserverProvider"]\n1c:I[17172,["3814","static/chunks/3a91511d-50da2831e72d40e5.js","9835","static/chunks/9835-313684ed6ff2179a.js","750","static/chunks/750-c1f16a3301e7196d.js","9493","static/chunks/9493-e88618608b542580.js","3061","static/chunks/3061-b544eb95cac501a8.js","1316","static/chunks/1316-11a1f0a401ed8022.js","6740","static/chunks/6740-337f8e04981a368c.js","7212","static/chunks/7212-081c7f262580543d.js","3185","static/chunks/app/layout-0bc039a425f44e89.js"],"default"]\n1d:I[27640,["3814","static/chunks/3a91511d-50da2831e72d40e5.js","9835","static/chunks/9835-313684ed6ff2179a.js","750","static/chunks/750-c1f16a3301e7196d.js","9493","static/chunks/',
+          ]);
+        </script>
+        <script>
+          self.__next_f.push([
+            1,
+            '9493-e88618608b542580.js","3061","static/chunks/3061-b544eb95cac501a8.js","1316","static/chunks/1316-11a1f0a401ed8022.js","6740","static/chunks/6740-337f8e04981a368c.js","7212","static/chunks/7212-081c7f262580543d.js","3185","static/chunks/app/layout-0bc039a425f44e89.js"],"GoogleTagManager"]\n1e:I[17240,["3814","static/chunks/3a91511d-50da2831e72d40e5.js","9835","static/chunks/9835-313684ed6ff2179a.js","750","static/chunks/750-c1f16a3301e7196d.js","9493","static/chunks/9493-e88618608b542580.js","3061","static/chunks/3061-b544eb95cac501a8.js","1316","static/chunks/1316-11a1f0a401ed8022.js","6740","static/chunks/6740-337f8e04981a368c.js","7212","static/chunks/7212-081c7f262580543d.js","3185","static/chunks/app/layout-0bc039a425f44e89.js"],"SpeedInsights"]\n20:I[76130,[],""]\n18:{"fontFamily":"system-ui,\\"Segoe UI\\",Roboto,Helvetica,Arial,sans-serif,\\"Apple Color Emoji\\",\\"Segoe UI Emoji\\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"}\n19:{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"}\n1a:{"display":"inline-block"}\n1b:{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0}\n21:[]\n',
+          ]);
+        </script>
+        <script>
+          self.__next_f.push([
+            1,
+            '0:[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/2882f330f5aa5ff3.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/673bf4202ccb2f27.css","precedence":"next","crossOrigin":"$undefined"}]],["$","$L5",null,{"buildId":"h8ZV82iYVJlv6aTraKmtj","assetPrefix":"","initialCanonicalUrl":"/board","initialTree":["",{"children":["(main)",{"children":["board",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],"initialSeedData":["",{"children":["(main)",{"children":["board",{"children":["__PAGE__",{},[["$L6",["$","$L7",null,{"props":{"params":{},"searchParams":{}},"Component":"$8"}]],null],null]},["$","$L9",null,{"parallelRouterKey":"children","segmentPath":["children","(main)","children","board","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$La",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},[[["$","$Lb",null,{}],["$","main",null,{"className":"h-full","children":["$","$L9",null,{"parallelRouterKey":"children","segmentPath":["children","(main)","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$La",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\\"Segoe UI\\",Roboto,Helvetica,Arial,sans-serif,\\"Apple Color Emoji\\",\\"Segoe UI Emoji\\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","$Lc",null,{}],["$","$Ld",null,{}]],null],null]},[["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_36bd41 bg-primary","children":[["$","$Le",null,{"color":"white"}],["$","$Lf",null,{"children":["$","$L10",null,{"children":["$","$L11",null,{"children":["$","$L12",null,{"children":["$","$L13",null,{"children":[["$","$L14",null,{"children":["$","$L15",null,{"children":["$","$L16",null,{"children":["$","$L17",null,{"children":["$","$L9",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$La",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":"$18","children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":"$19","children":"404"}],["$","div",null,{"style":"$1a","children":["$","h2",null,{"style":"$1b","children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/628765f20b848f76.css","precedence":"next","crossOrigin":"$undefined"}]]}]}]}]}]}],["$","$L1c",null,{}],["$","$L1d",null,{"gtmId":"GTM-WPXVCX8X"}]]}]}]}]}]}],["$","$L1e",null,{"sampleRate":0.5}],false]}]}],null],null],"couldBeIntercepted":false,"initialHead":[false,"$L1f"],"globalErrorComponent":"$20","missingSlots":"$W21"}]]\n',
+          ]);
+        </script>
+        <script>
+          self.__next_f.push([
+            1,
+            '1f:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Pump"}],["$","meta","3",{"name":"description","content":"Launch a coin that is instantly tradable without having to seed liquidity."}],["$","link","4",{"rel":"icon","href":"/icon.png?c2a22dd8671140c9","type":"image/png","sizes":"389x389"}],["$","meta","5",{"name":"next-size-adjust"}]]\n6:null\n',
+          ]);
+        </script>
+        <script>
+          (function () {
+            function c() {
+              var b = a.contentDocument || a.contentWindow.document;
+              if (b) {
+                var d = b.createElement("script");
+                d.innerHTML =
+                  "window.__CF$cv$params={r:'8c1f569869bd0b8e',t:'MTcyNjEzODI0My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+                b.getElementsByTagName("head")[0].appendChild(d);
+              }
+            }
+            if (document.body) {
+              var a = document.createElement("iframe");
+              a.height = 1;
+              a.width = 1;
+              a.style.position = "absolute";
+              a.style.top = 0;
+              a.style.left = 0;
+              a.style.border = "none";
+              a.style.visibility = "hidden";
+              document.body.appendChild(a);
+              if ("loading" !== document.readyState) c();
+              else if (window.addEventListener)
+                document.addEventListener("DOMContentLoaded", c);
+              else {
+                var e = document.onreadystatechange || function () {};
+                document.onreadystatechange = function (b) {
+                  e(b);
+                  "loading" !== document.readyState &&
+                    ((document.onreadystatechange = e), c());
+                };
+              }
+            }
+          })();
+        </script>
+        <iframe
+          height="1"
+          width="1"
+          style="
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border: none;
+            visibility: hidden;
+          "
+        ></iframe>
+        <script id="_next-gtm-init" data-nscript="afterInteractive">
+          (function (w, l) {
+            w[l] = w[l] || [];
+            w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          })(window, "dataLayer");
+        </script>
+        <script
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-WPXVCX8X"
+          id="_next-gtm"
+          data-ntpc="GTM"
+          data-nscript="afterInteractive"
+        ></script>
+        <next-route-announcer style="position: absolute"></next-route-announcer
+        ><style>
+          .grecaptcha-badge {
+            display: none !important;
+          }</style
+        ><iframe
+          allow="join-ad-interest-group"
+          data-tagging-id="G-T65NVS2TQ6"
+          data-load-time="1726138246943"
+          height="0"
+          width="0"
+          src="https://td.doubleclick.net/td/ga/rul?tid=G-T65NVS2TQ6&amp;gacid=583838982.1725886895&amp;gtm=45je4990v9186528622z89186509672za200zb9186509672&amp;dma=0&amp;gcs=G111&amp;gcd=13t3t3l3l5l1&amp;npa=0&amp;pscdl=noapi&amp;aip=1&amp;fledge=1&amp;frm=0&amp;tag_exp=0&amp;z=620175223"
+          style="display: none; visibility: hidden"
+        ></iframe
+        ><iframe
+          allow="join-ad-interest-group"
+          data-tagging-id="G-T65NVS2TQ6"
+          data-load-time="1726139212176"
+          height="0"
+          width="0"
+          src="https://td.doubleclick.net/td/ga/rul?tid=G-T65NVS2TQ6&amp;gacid=583838982.1725886895&amp;gtm=45je4990v9186528622z89186509672za200zb9186509672&amp;dma=0&amp;gcs=G111&amp;gcd=13t3t3l3l5l1&amp;npa=0&amp;pscdl=noapi&amp;aip=1&amp;fledge=1&amp;frm=0&amp;tag_exp=0&amp;z=1279306041"
+          style="display: none; visibility: hidden"
+        ></iframe>
+        <div>
+          <div
+            class="grecaptcha-badge"
+            data-style="bottomright"
+            style="
+              width: 256px;
+              height: 60px;
+              position: fixed;
+              visibility: hidden;
+              display: block;
+              transition: right 0.3s;
+              bottom: 14px;
+              right: -186px;
+              box-shadow: gray 0px 0px 5px;
+              border-radius: 2px;
+              overflow: hidden;
+            "
+          >
+            <div class="grecaptcha-logo">
+              <iframe
+                title="reCAPTCHA"
+                width="256"
+                height="60"
+                role="presentation"
+                name="a-inicw841qljz"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/enterprise/anchor?ar=2&amp;k=6LcmKsYpAAAAABAANpgK3LDxDlxfDCoPQUYm3NZI&amp;co=aHR0cHM6Ly9wdW1wLmZ1bjo0NDM.&amp;hl=en&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;badge=bottomright&amp;cb=6rrhhpzf1gsq"
+              ></iframe>
+            </div>
+            <div class="grecaptcha-error"></div>
+            <textarea
+              id="g-recaptcha-response-100000"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+        <style>
+          .grecaptcha-badge {
+            display: none !important;
+          }</style
+        ><iframe
+          allow="join-ad-interest-group"
+          data-tagging-id="G-T65NVS2TQ6"
+          data-load-time="1726143361986"
+          height="0"
+          width="0"
+          src="https://td.doubleclick.net/td/ga/rul?tid=G-T65NVS2TQ6&amp;gacid=583838982.1725886895&amp;gtm=45je4990v9186528622za200zb9186509672&amp;dma=0&amp;gcs=G111&amp;gcd=13t3t3l3l5l1&amp;npa=0&amp;pscdl=noapi&amp;aip=1&amp;fledge=1&amp;frm=0&amp;tag_exp=0&amp;z=495754729"
+          style="display: none; visibility: hidden"
+        ></iframe>
+        <div>
+          <div
+            class="grecaptcha-badge"
+            data-style="none"
+            style="
+              width: 256px;
+              height: 60px;
+              position: fixed;
+              visibility: hidden;
+              display: block;
+              transition: right 0.3s;
+              bottom: 14px;
+              right: -186px;
+              box-shadow: gray 0px 0px 5px;
+              border-radius: 2px;
+              overflow: hidden;
+            "
+          >
+            <div class="grecaptcha-logo">
+              <iframe
+                title="reCAPTCHA"
+                width="256"
+                height="60"
+                role="presentation"
+                name="a-oemt6ysu8odl"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/enterprise/anchor?ar=2&amp;k=6LcmKsYpAAAAABAANpgK3LDxDlxfDCoPQUYm3NZI&amp;co=aHR0cHM6Ly9wdW1wLmZ1bjo0NDM.&amp;hl=en&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;badge=bottomright&amp;cb=70knefbuzwsx"
+              ></iframe>
+            </div>
+            <div class="grecaptcha-error"></div>
+            <textarea
+              id="g-recaptcha-response-100000"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+        <style>
+          .grecaptcha-badge {
+            display: none !important;
+          }
+        </style>
+        <div>
+          <div
+            class="grecaptcha-badge"
+            data-style="none"
+            style="
+              width: 256px;
+              height: 60px;
+              position: fixed;
+              visibility: hidden;
+              display: block;
+              transition: right 0.3s;
+              bottom: 14px;
+              right: -186px;
+              box-shadow: gray 0px 0px 5px;
+              border-radius: 2px;
+              overflow: hidden;
+            "
+          >
+            <div class="grecaptcha-logo">
+              <iframe
+                title="reCAPTCHA"
+                width="256"
+                height="60"
+                role="presentation"
+                name="a-hr9dcrldkvco"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/enterprise/anchor?ar=2&amp;k=6LcmKsYpAAAAABAANpgK3LDxDlxfDCoPQUYm3NZI&amp;co=aHR0cHM6Ly9wdW1wLmZ1bjo0NDM.&amp;hl=en&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;badge=bottomright&amp;cb=ng469jia4led"
+              ></iframe>
+            </div>
+            <div class="grecaptcha-error"></div>
+            <textarea
+              id="g-recaptcha-response-100000"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+        <style>
+          .grecaptcha-badge {
+            display: none !important;
+          }
+        </style>
+        <div>
+          <div
+            class="grecaptcha-badge"
+            data-style="none"
+            style="
+              width: 256px;
+              height: 60px;
+              position: fixed;
+              visibility: hidden;
+              display: block;
+              transition: right 0.3s;
+              bottom: 14px;
+              right: -186px;
+              box-shadow: gray 0px 0px 5px;
+              border-radius: 2px;
+              overflow: hidden;
+            "
+          >
+            <div class="grecaptcha-logo">
+              <iframe
+                title="reCAPTCHA"
+                width="256"
+                height="60"
+                role="presentation"
+                name="a-yzi1dlu09k6m"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/enterprise/anchor?ar=2&amp;k=6LcmKsYpAAAAABAANpgK3LDxDlxfDCoPQUYm3NZI&amp;co=aHR0cHM6Ly9wdW1wLmZ1bjo0NDM.&amp;hl=en&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;badge=bottomright&amp;cb=4v5m09nw1okx"
+              ></iframe>
+            </div>
+            <div class="grecaptcha-error"></div>
+            <textarea
+              id="g-recaptcha-response-100000"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+        <style>
+          .grecaptcha-badge {
+            display: none !important;
+          }
+        </style>
+        <div>
+          <div
+            class="grecaptcha-badge"
+            data-style="none"
+            style="
+              width: 256px;
+              height: 60px;
+              position: fixed;
+              visibility: hidden;
+              display: block;
+              transition: right 0.3s;
+              bottom: 14px;
+              right: -186px;
+              box-shadow: gray 0px 0px 5px;
+              border-radius: 2px;
+              overflow: hidden;
+            "
+          >
+            <div class="grecaptcha-logo">
+              <iframe
+                title="reCAPTCHA"
+                width="256"
+                height="60"
+                role="presentation"
+                name="a-htr3jvi333bv"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/enterprise/anchor?ar=2&amp;k=6LcmKsYpAAAAABAANpgK3LDxDlxfDCoPQUYm3NZI&amp;co=aHR0cHM6Ly9wdW1wLmZ1bjo0NDM.&amp;hl=en&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;badge=bottomright&amp;cb=9ali4bvf4mmr"
+              ></iframe>
+            </div>
+            <div class="grecaptcha-error"></div>
+            <textarea
+              id="g-recaptcha-response-100000"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+        <style>
+          .grecaptcha-badge {
+            display: none !important;
+          }
+        </style>
+        <div>
+          <div
+            class="grecaptcha-badge"
+            data-style="none"
+            style="
+              width: 256px;
+              height: 60px;
+              position: fixed;
+              visibility: hidden;
+              display: block;
+              transition: right 0.3s;
+              bottom: 14px;
+              right: -186px;
+              box-shadow: gray 0px 0px 5px;
+              border-radius: 2px;
+              overflow: hidden;
+            "
+          >
+            <div class="grecaptcha-logo">
+              <iframe
+                title="reCAPTCHA"
+                width="256"
+                height="60"
+                role="presentation"
+                name="a-f76kbeb7p7t0"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/enterprise/anchor?ar=2&amp;k=6LcmKsYpAAAAABAANpgK3LDxDlxfDCoPQUYm3NZI&amp;co=aHR0cHM6Ly9wdW1wLmZ1bjo0NDM.&amp;hl=en&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;badge=bottomright&amp;cb=jgj44qm5hhc2"
+              ></iframe>
+            </div>
+            <div class="grecaptcha-error"></div>
+            <textarea
+              id="g-recaptcha-response-100000"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+        <style>
+          .grecaptcha-badge {
+            display: none !important;
+          }
+        </style>
+        <div>
+          <div
+            class="grecaptcha-badge"
+            data-style="none"
+            style="
+              width: 256px;
+              height: 60px;
+              position: fixed;
+              visibility: hidden;
+              display: block;
+              transition: right 0.3s;
+              bottom: 14px;
+              right: -186px;
+              box-shadow: gray 0px 0px 5px;
+              border-radius: 2px;
+              overflow: hidden;
+            "
+          >
+            <div class="grecaptcha-logo">
+              <iframe
+                title="reCAPTCHA"
+                width="256"
+                height="60"
+                role="presentation"
+                name="a-b74j1ousf7e"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/enterprise/anchor?ar=2&amp;k=6LcmKsYpAAAAABAANpgK3LDxDlxfDCoPQUYm3NZI&amp;co=aHR0cHM6Ly9wdW1wLmZ1bjo0NDM.&amp;hl=en&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;badge=bottomright&amp;cb=4v3jcxexl7o6"
+              ></iframe>
+            </div>
+            <div class="grecaptcha-error"></div>
+            <textarea
+              id="g-recaptcha-response-100000"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+        <iframe
+          allow="join-ad-interest-group"
+          data-tagging-id="G-T65NVS2TQ6"
+          data-load-time="1726144567177"
+          height="0"
+          width="0"
+          src="https://td.doubleclick.net/td/ga/rul?tid=G-T65NVS2TQ6&amp;gacid=583838982.1725886895&amp;gtm=45je4990v9186528622za200zb9186509672&amp;dma=0&amp;gcs=G111&amp;gcd=13t3t3l3l5l1&amp;npa=0&amp;pscdl=noapi&amp;aip=1&amp;fledge=1&amp;frm=0&amp;tag_exp=0&amp;z=282835467"
+          style="display: none; visibility: hidden"
+        ></iframe
+        ><style>
+          .grecaptcha-badge {
+            display: none !important;
+          }
+        </style>
+        <div>
+          <div
+            class="grecaptcha-badge"
+            data-style="none"
+            style="
+              width: 256px;
+              height: 60px;
+              position: fixed;
+              visibility: hidden;
+              display: block;
+              transition: right 0.3s;
+              bottom: 14px;
+              right: -186px;
+              box-shadow: gray 0px 0px 5px;
+              border-radius: 2px;
+              overflow: hidden;
+            "
+          >
+            <div class="grecaptcha-logo">
+              <iframe
+                title="reCAPTCHA"
+                width="256"
+                height="60"
+                role="presentation"
+                name="a-noxzvriehxdl"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/enterprise/anchor?ar=1&amp;k=6LcmKsYpAAAAABAANpgK3LDxDlxfDCoPQUYm3NZI&amp;co=aHR0cHM6Ly9wdW1wLmZ1bjo0NDM.&amp;hl=en&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;badge=bottomright&amp;cb=lv8w3kb9hwjx"
+              ></iframe>
+            </div>
+            <div class="grecaptcha-error"></div>
+            <textarea
+              id="g-recaptcha-response-100000"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+        <style>
+          .grecaptcha-badge {
+            display: none !important;
+          }
+        </style>
+        <div>
+          <div
+            class="grecaptcha-badge"
+            data-style="none"
+            style="
+              width: 256px;
+              height: 60px;
+              position: fixed;
+              visibility: hidden;
+              display: block;
+              transition: right 0.3s;
+              bottom: 14px;
+              right: -186px;
+              box-shadow: gray 0px 0px 5px;
+              border-radius: 2px;
+              overflow: hidden;
+            "
+          >
+            <div class="grecaptcha-logo">
+              <iframe
+                title="reCAPTCHA"
+                width="256"
+                height="60"
+                role="presentation"
+                name="a-pj24rux5c3bd"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/enterprise/anchor?ar=1&amp;k=6LcmKsYpAAAAABAANpgK3LDxDlxfDCoPQUYm3NZI&amp;co=aHR0cHM6Ly9wdW1wLmZ1bjo0NDM.&amp;hl=en&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;badge=bottomright&amp;cb=3027owvmq1t"
+              ></iframe>
+            </div>
+            <div class="grecaptcha-error"></div>
+            <textarea
+              id="g-recaptcha-response-100000"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+        <style>
+          .grecaptcha-badge {
+            display: none !important;
+          }
+        </style>
+        <div>
+          <div
+            class="grecaptcha-badge"
+            data-style="none"
+            style="
+              width: 256px;
+              height: 60px;
+              position: fixed;
+              visibility: hidden;
+              display: block;
+              transition: right 0.3s;
+              bottom: 14px;
+              right: -186px;
+              box-shadow: gray 0px 0px 5px;
+              border-radius: 2px;
+              overflow: hidden;
+            "
+          >
+            <div class="grecaptcha-logo">
+              <iframe
+                title="reCAPTCHA"
+                width="256"
+                height="60"
+                role="presentation"
+                name="a-tkzrwd3737k8"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/enterprise/anchor?ar=1&amp;k=6LcmKsYpAAAAABAANpgK3LDxDlxfDCoPQUYm3NZI&amp;co=aHR0cHM6Ly9wdW1wLmZ1bjo0NDM.&amp;hl=en&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;badge=bottomright&amp;cb=eenvp0ebkb5f"
+              ></iframe>
+            </div>
+            <div class="grecaptcha-error"></div>
+            <textarea
+              id="g-recaptcha-response-100000"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+        <style>
+          .grecaptcha-badge {
+            display: none !important;
+          }
+        </style>
+        <div>
+          <div
+            class="grecaptcha-badge"
+            data-style="none"
+            style="
+              width: 256px;
+              height: 60px;
+              position: fixed;
+              visibility: hidden;
+              display: block;
+              transition: right 0.3s;
+              bottom: 14px;
+              right: -186px;
+              box-shadow: gray 0px 0px 5px;
+              border-radius: 2px;
+              overflow: hidden;
+            "
+          >
+            <div class="grecaptcha-logo">
+              <iframe
+                title="reCAPTCHA"
+                width="256"
+                height="60"
+                role="presentation"
+                name="a-xt8ewenn2pqc"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/enterprise/anchor?ar=1&amp;k=6LcmKsYpAAAAABAANpgK3LDxDlxfDCoPQUYm3NZI&amp;co=aHR0cHM6Ly9wdW1wLmZ1bjo0NDM.&amp;hl=en&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;badge=bottomright&amp;cb=9gmrsestcjjc"
+              ></iframe>
+            </div>
+            <div class="grecaptcha-error"></div>
+            <textarea
+              id="g-recaptcha-response-100000"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+        <iframe
+          allow="join-ad-interest-group"
+          data-tagging-id="G-T65NVS2TQ6"
+          data-load-time="1726146303038"
+          height="0"
+          width="0"
+          src="https://td.doubleclick.net/td/ga/rul?tid=G-T65NVS2TQ6&amp;gacid=583838982.1725886895&amp;gtm=45je4990v9186528622za200zb9186509672&amp;dma=0&amp;gcs=G111&amp;gcd=13t3t3l3l5l1&amp;npa=0&amp;pscdl=noapi&amp;aip=1&amp;fledge=1&amp;frm=0&amp;tag_exp=0&amp;z=1385826690"
+          style="display: none; visibility: hidden"
+        ></iframe
+        ><style>
+          .grecaptcha-badge {
+            display: none !important;
+          }
+        </style>
+        <div>
+          <div
+            class="grecaptcha-badge"
+            data-style="none"
+            style="
+              width: 256px;
+              height: 60px;
+              position: fixed;
+              visibility: hidden;
+              display: block;
+              transition: right 0.3s;
+              bottom: 14px;
+              right: -186px;
+              box-shadow: gray 0px 0px 5px;
+              border-radius: 2px;
+              overflow: hidden;
+            "
+          >
+            <div class="grecaptcha-logo">
+              <iframe
+                title="reCAPTCHA"
+                width="256"
+                height="60"
+                role="presentation"
+                name="a-a6xvwrlk8pmm"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/enterprise/anchor?ar=1&amp;k=6LcmKsYpAAAAABAANpgK3LDxDlxfDCoPQUYm3NZI&amp;co=aHR0cHM6Ly9wdW1wLmZ1bjo0NDM.&amp;hl=en&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;badge=bottomright&amp;cb=py44eyt6vht1"
+              ></iframe>
+            </div>
+            <div class="grecaptcha-error"></div>
+            <textarea
+              id="g-recaptcha-response-100000"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+        <style>
+          .grecaptcha-badge {
+            display: none !important;
+          }
+        </style>
+        <div>
+          <div
+            class="grecaptcha-badge"
+            data-style="none"
+            style="
+              width: 256px;
+              height: 60px;
+              position: fixed;
+              visibility: hidden;
+              display: block;
+              transition: right 0.3s;
+              bottom: 14px;
+              right: -186px;
+              box-shadow: gray 0px 0px 5px;
+              border-radius: 2px;
+              overflow: hidden;
+            "
+          >
+            <div class="grecaptcha-logo">
+              <iframe
+                title="reCAPTCHA"
+                width="256"
+                height="60"
+                role="presentation"
+                name="a-nhncf9q67sln"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/enterprise/anchor?ar=1&amp;k=6LcmKsYpAAAAABAANpgK3LDxDlxfDCoPQUYm3NZI&amp;co=aHR0cHM6Ly9wdW1wLmZ1bjo0NDM.&amp;hl=en&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;badge=bottomright&amp;cb=fqq6afq3j5v2"
+              ></iframe>
+            </div>
+            <div class="grecaptcha-error"></div>
+            <textarea
+              id="g-recaptcha-response-100000"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+        <style>
+          .grecaptcha-badge {
+            display: none !important;
+          }
+        </style>
+        <div>
+          <div
+            class="grecaptcha-badge"
+            data-style="none"
+            style="
+              width: 256px;
+              height: 60px;
+              position: fixed;
+              visibility: hidden;
+              display: block;
+              transition: right 0.3s;
+              bottom: 14px;
+              right: -186px;
+              box-shadow: gray 0px 0px 5px;
+              border-radius: 2px;
+              overflow: hidden;
+            "
+          >
+            <div class="grecaptcha-logo">
+              <iframe
+                title="reCAPTCHA"
+                width="256"
+                height="60"
+                role="presentation"
+                name="a-a4m8i0lhpwdl"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/enterprise/anchor?ar=1&amp;k=6LcmKsYpAAAAABAANpgK3LDxDlxfDCoPQUYm3NZI&amp;co=aHR0cHM6Ly9wdW1wLmZ1bjo0NDM.&amp;hl=en&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;badge=bottomright&amp;cb=oow6z56nuis7"
+              ></iframe>
+            </div>
+            <div class="grecaptcha-error"></div>
+            <textarea
+              id="g-recaptcha-response-100000"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+        <style>
+          .grecaptcha-badge {
+            display: none !important;
+          }
+        </style>
+        <div>
+          <div
+            class="grecaptcha-badge"
+            data-style="none"
+            style="
+              width: 256px;
+              height: 60px;
+              position: fixed;
+              visibility: hidden;
+              display: block;
+              transition: right 0.3s;
+              bottom: 14px;
+              right: -186px;
+              box-shadow: gray 0px 0px 5px;
+              border-radius: 2px;
+              overflow: hidden;
+            "
+          >
+            <div class="grecaptcha-logo">
+              <iframe
+                title="reCAPTCHA"
+                width="256"
+                height="60"
+                role="presentation"
+                name="a-fz6cdfrhxy6v"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/enterprise/anchor?ar=1&amp;k=6LcmKsYpAAAAABAANpgK3LDxDlxfDCoPQUYm3NZI&amp;co=aHR0cHM6Ly9wdW1wLmZ1bjo0NDM.&amp;hl=en&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;badge=bottomright&amp;cb=607notfhqb2o"
+              ></iframe>
+            </div>
+            <div class="grecaptcha-error"></div>
+            <textarea
+              id="g-recaptcha-response-100000"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+        <iframe
+          allow="join-ad-interest-group"
+          data-tagging-id="G-T65NVS2TQ6"
+          data-load-time="1726146814817"
+          height="0"
+          width="0"
+          src="https://td.doubleclick.net/td/ga/rul?tid=G-T65NVS2TQ6&amp;gacid=583838982.1725886895&amp;gtm=45je4990v9186528622za200zb9186509672&amp;dma=0&amp;gcs=G111&amp;gcd=13t3t3l3l5l1&amp;npa=0&amp;pscdl=noapi&amp;aip=1&amp;fledge=1&amp;frm=0&amp;tag_exp=0&amp;z=709870704"
+          style="display: none; visibility: hidden"
+        ></iframe
+        ><style>
+          .grecaptcha-badge {
+            display: none !important;
+          }
+        </style>
+        <div>
+          <div
+            class="grecaptcha-badge"
+            data-style="none"
+            style="
+              width: 256px;
+              height: 60px;
+              position: fixed;
+              visibility: hidden;
+              display: block;
+              transition: right 0.3s;
+              bottom: 14px;
+              right: -186px;
+              box-shadow: gray 0px 0px 5px;
+              border-radius: 2px;
+              overflow: hidden;
+            "
+          >
+            <div class="grecaptcha-logo">
+              <iframe
+                title="reCAPTCHA"
+                width="256"
+                height="60"
+                role="presentation"
+                name="a-2y6iuopk014u"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/enterprise/anchor?ar=1&amp;k=6LcmKsYpAAAAABAANpgK3LDxDlxfDCoPQUYm3NZI&amp;co=aHR0cHM6Ly9wdW1wLmZ1bjo0NDM.&amp;hl=en&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;badge=bottomright&amp;cb=enscmvvz92yq"
+              ></iframe>
+            </div>
+            <div class="grecaptcha-error"></div>
+            <textarea
+              id="g-recaptcha-response-100000"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+        <style>
+          .grecaptcha-badge {
+            display: none !important;
+          }
+        </style>
+        <div>
+          <div
+            class="grecaptcha-badge"
+            data-style="none"
+            style="
+              width: 256px;
+              height: 60px;
+              position: fixed;
+              visibility: hidden;
+              display: block;
+              transition: right 0.3s;
+              bottom: 14px;
+              right: -186px;
+              box-shadow: gray 0px 0px 5px;
+              border-radius: 2px;
+              overflow: hidden;
+            "
+          >
+            <div class="grecaptcha-logo">
+              <iframe
+                title="reCAPTCHA"
+                width="256"
+                height="60"
+                role="presentation"
+                name="a-801z09qj4j7d"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/enterprise/anchor?ar=1&amp;k=6LcmKsYpAAAAABAANpgK3LDxDlxfDCoPQUYm3NZI&amp;co=aHR0cHM6Ly9wdW1wLmZ1bjo0NDM.&amp;hl=en&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;badge=bottomright&amp;cb=ipi52rhxom9m"
+              ></iframe>
+            </div>
+            <div class="grecaptcha-error"></div>
+            <textarea
+              id="g-recaptcha-response-100000"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+        <style>
+          .grecaptcha-badge {
+            display: none !important;
+          }
+        </style>
+        <div>
+          <div
+            class="grecaptcha-badge"
+            data-style="none"
+            style="
+              width: 256px;
+              height: 60px;
+              position: fixed;
+              visibility: hidden;
+              display: block;
+              transition: right 0.3s;
+              bottom: 14px;
+              right: -186px;
+              box-shadow: gray 0px 0px 5px;
+              border-radius: 2px;
+              overflow: hidden;
+            "
+          >
+            <div class="grecaptcha-logo">
+              <iframe
+                title="reCAPTCHA"
+                width="256"
+                height="60"
+                role="presentation"
+                name="a-fv4inn6nx1lb"
+                frameborder="0"
+                scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/enterprise/anchor?ar=1&amp;k=6LcmKsYpAAAAABAANpgK3LDxDlxfDCoPQUYm3NZI&amp;co=aHR0cHM6Ly9wdW1wLmZ1bjo0NDM.&amp;hl=en&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;badge=bottomright&amp;cb=i0uay8t46hzk"
+              ></iframe>
+            </div>
+            <div class="grecaptcha-error"></div>
+            <textarea
+              id="g-recaptcha-response-100000"
+              name="g-recaptcha-response"
+              class="g-recaptcha-response"
+              style="
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              "
+            ></textarea>
+          </div>
+          <iframe style="display: none"></iframe>
+        </div>
+      </body>
+      
+</body>
+</html>
